@@ -1,0 +1,14 @@
+db.students.insertMany([
+  {
+    name: "Ravi Kumar",
+    age: 22,
+    course: "MCA",
+    city: "Noida"
+  },
+  {
+    name: "Sneha Sharma",
+    age: 20,
+    course: "B.Sc",
+    city: "Mumbai"
+  }
+]);
