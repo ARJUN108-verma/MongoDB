@@ -1,0 +1,9 @@
+// Create a collection explicitly
+db.createCollection("students")
+
+// Insert a document (creates the collection if it doesn't exist)
+db.students.insertOne({
+    name: "Arjun Verma",
+    age: 22,
+    course: "Computer Science"
+})
