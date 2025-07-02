@@ -1,0 +1,26 @@
+// 1. Connect to your MongoDB (in shell or script)
+// Example using Mongo Shell or MongoDB Compass
+
+use schoolDB;
+
+// 2. Insert sample data (if not already inserted)
+db.students.insertMany([
+  { _id: 1, name: "John", age: 20, grade: "B" },
+  { _id: 2, name: "Alice", age: 22, grade: "C" },
+  { _id: 3, name: "Bob", age: 21, grade: "B" }
+]);
+
+// 3. Use the update operator to update John's grade from B to A
+db.students.updateOne(
+  { name: "John" },               // Filter criteria
+  { $set: { grade: "A" } }        // Update operation using $set
+);
+
+// 4. You can also update multiple documents
+db.students.updateMany(
+  { grade: "B" },
+  { $set: { status: "Passed" } }
+);
+
+// 5. Check updated records
+db.students.find().pretty();
