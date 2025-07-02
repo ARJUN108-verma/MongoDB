@@ -1,0 +1,2 @@
+db.users.deleteOne({ name: "John" });
+db.collection_name.deleteMany({ field: "value" });
