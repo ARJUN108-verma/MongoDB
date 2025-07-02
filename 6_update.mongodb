@@ -1,0 +1,4 @@
+db.collection.updateMany(
+  { filter_field: value },        
+  { $set: { field_to_update: new_value } }
+)
