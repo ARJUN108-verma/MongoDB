@@ -1,0 +1,16 @@
+db.students.insertMany([
+  { name: "Alice", subject: "Math", marks: 85 },
+  { name: "Bob", subject: "Math", marks: 70 },
+  { name: "Charlie", subject: "Science", marks: 90 },
+  { name: "David", subject: "Math", marks: 60 },
+  { name: "Eve", subject: "Science", marks: 75 }
+]);
+
+db.students.aggregate([
+  {
+    $group: {
+      _id: "$subject",                  // Group by subject
+      avgMarks: { $avg: "$marks" }     // Calculate average marks
+    }
+  }
+])
